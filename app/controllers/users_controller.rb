@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
   
   def authenticate
-    render json: true
+    render json: user_to_json(@current_user)
   end
   
   protected
