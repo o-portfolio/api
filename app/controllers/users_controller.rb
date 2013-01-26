@@ -8,18 +8,27 @@ class UsersController < ApplicationController
       return false
     end
     
-    render json: @current_user.to_json(only:[:id, :first_name, :last_name, :email])
+    render json: user_to_json(@current_user)
   end
   
   def create
-    render json: User.create(params.slice(:first_name, :last_name, :email, :password, :password_confirmation))
+    user = User.create(params.slice(:first_name, :last_name, :email, :password, :password_confirmation))
+    render json: user_to_json(user)
   end
   
   def update
+    @current_user.update_attributes(params.slice(:first_name, :last_name, :email, :password, :password_confirmation))
+    render json: user_to_json(@current_user)
   end
   
   def authenticate
     render json: true
   end
+  
+  protected
+  
+    def user_to_json(user)
+      user.to_json(only:[:id, :first_name, :last_name, :email])
+    end
   
 end
