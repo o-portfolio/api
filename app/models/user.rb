@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   
   def encrypt_password    
     return false unless password.present?
-    password_salt = BCrypt::Engine.generate_salt
-    password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    self.password_salt = BCrypt::Engine.generate_salt
+    self.password_hash = BCrypt::Engine.hash_secret(password, self.password_salt)
   end
   
   def self.authenticate(email, password)
