@@ -7,5 +7,9 @@ class Entry < ActiveRecord::Base
                     :styles => { :thumbnail => "100x100#" },
                     :storage => :s3,
                     :s3_credentials => S3_CREDENTIALS
+                    
+  def image_url
+    image?? image.url(:original) : nil
+  end
   
 end
