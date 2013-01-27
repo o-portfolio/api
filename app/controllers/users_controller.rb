@@ -12,13 +12,21 @@ class UsersController < ApplicationController
   end
   
   def create
-    user = User.create(params.slice(:first_name, :last_name, :email, :password, :password_confirmation))
-    render json: user_to_json(user)
+    user = User.new(params.slice(:first_name, :last_name, :email, :password))
+    if user.save
+      render json: user_to_json(user), status: 200
+    else
+      render json: {errors: user.errors}, status: 422
+    end
   end
   
   def update
-    @current_user.update_attributes(params.slice(:first_name, :last_name, :email, :password, :password_confirmation))
-    render json: user_to_json(@current_user)
+    if @current_user.update_attributes(params.slice(:first_name, :last_name, :email, :password))
+      render json: user_to_json(@current_user), status: 200
+    else
+      render json: {errors: @current_user.errors}, status: 422
+    end
+    
   end
   
   def authenticate

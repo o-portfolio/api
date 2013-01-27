@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'aws-sdk'
+gem 'paperclip'
+gem 'thin'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 

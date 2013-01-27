@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126232710) do
+ActiveRecord::Schema.define(:version => 20130127005854) do
 
   create_table "entries", :force => true do |t|
     t.integer  "user_id"
@@ -19,8 +19,16 @@ ActiveRecord::Schema.define(:version => 20130126232710) do
     t.text     "description"
     t.text     "reflection"
     t.datetime "occurred_at"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.decimal  "latitude",           :precision => 15, :scale => 10
+    t.decimal  "longitude",          :precision => 15, :scale => 10
+    t.decimal  "image_latitude",     :precision => 15, :scale => 10
+    t.decimal  "image_longitude",    :precision => 15, :scale => 10
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", :force => true do |t|
