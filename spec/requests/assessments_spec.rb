@@ -75,10 +75,10 @@ describe '/assessments' do
     it "should create with correct data" do
       user = http_login
       assessment = create :mini_cex_assessment, trainee: user
-      put "/assessments/1", {title: "FTW!!"}, @env
+      put "/assessments/1", {date: assessment.date - 1.week}, @env
 
       response.code.should == "200"
-      response.body.should == "{\"assessment\":{\"id\":1,\"trainee_id\":1,\"date\":\"2013-01-02T03:04:05Z\",\"assessor_name\":\"Jeremy Walker\",\"assessor_position\":\"King of World\",\"assessor_email\":\"jez.walker@mgmail.com\",\"clinical_setting\":\"ward\",\"clinical_problem_categories\":\"---\\n- breathing\\n- circulation\\n\",\"focus_of_encounter\":\"discharge\",\"case_summary\":\"lorem ipsum\",\"positive_areas\":\"lorem ipsum\",\"development_areas\":\"lorem ipsum\",\"comments\":\"lorem ipsum\"}}"
+      response.body.should == "{\"assessment\":{\"id\":1,\"trainee_id\":1,\"date\":\"2012-12-26T03:04:05Z\",\"assessor_name\":\"Jeremy Walker\",\"assessor_position\":\"King of World\",\"assessor_email\":\"jez.walker@mgmail.com\",\"clinical_setting\":\"ward\",\"clinical_problem_categories\":\"---\\n- breathing\\n- circulation\\n\",\"focus_of_encounter\":\"discharge\",\"case_summary\":\"lorem ipsum\",\"positive_areas\":\"lorem ipsum\",\"development_areas\":\"lorem ipsum\",\"comments\":\"lorem ipsum\"}}"
     end
   end
 end
