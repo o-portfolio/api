@@ -1,5 +1,4 @@
 class Entry < ActiveRecord::Base
-  attr_accessible :description, :reflection, :title, :occurred_at, :image, :image_latitude, :image_longitude
   
   belongs_to :user
   validates :user, presence: true

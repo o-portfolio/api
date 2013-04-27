@@ -32,4 +32,5 @@ class EntriesController < ApplicationController
     @entry = @current_user.entries.find(params[:id])
     @entry.destroy
   end
+
 end

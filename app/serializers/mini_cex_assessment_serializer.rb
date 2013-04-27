@@ -1,0 +1,2 @@
+class MiniCexAssessmentSerializer < AssessmentSerializer
+end

@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130127005854) do
+ActiveRecord::Schema.define(:version => 20130427212603) do
+
+  create_table "assessments", :force => true do |t|
+    t.string   "type",                        :null => false
+    t.integer  "trainee_id",                  :null => false
+    t.datetime "date",                        :null => false
+    t.string   "assessor_name"
+    t.string   "assessor_position"
+    t.string   "assessor_email"
+    t.string   "clinical_setting"
+    t.string   "clinical_problem_categories"
+    t.string   "focus_of_encounter"
+    t.text     "case_summary"
+    t.text     "positive_areas"
+    t.text     "development_areas"
+    t.text     "comments"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
 
   create_table "entries", :force => true do |t|
     t.integer  "user_id"
@@ -21,8 +39,6 @@ ActiveRecord::Schema.define(:version => 20130127005854) do
     t.datetime "occurred_at"
     t.datetime "created_at",                                         :null => false
     t.datetime "updated_at",                                         :null => false
-    t.decimal  "latitude",           :precision => 15, :scale => 10
-    t.decimal  "longitude",          :precision => 15, :scale => 10
     t.decimal  "image_latitude",     :precision => 15, :scale => 10
     t.decimal  "image_longitude",    :precision => 15, :scale => 10
     t.string   "image_file_name"

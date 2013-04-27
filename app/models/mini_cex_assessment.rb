@@ -1,0 +1,2 @@
+class MiniCexAssessment < Assessment
+end

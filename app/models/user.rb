@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   
   has_many :entries
+  has_many :assessments, foreign_key: :trainee_id
   
   def encrypt_password    
     if password.present?
