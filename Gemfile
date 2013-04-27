@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails-api'
+gem 'active_model_serializers'
 gem 'rails', '3.2.11'
 gem 'aws-sdk'
 gem 'paperclip'
@@ -9,6 +11,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 group :test, :development do
   gem 'rspec-rails'
+	gem 'factory_girl_rails'
 end
 
 group :development do

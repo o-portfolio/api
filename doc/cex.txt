@@ -1,0 +1,31 @@
+assessments = [
+  {
+    trainee_id: 1,
+    trainee_name: "Dr LJ",
+    date: 20130302,
+    assessor_name: "Jeremy Walker",
+    assessor_position: "King of World",
+    assessor_email: "jez.walker@mgmail.com",
+    clinical_setting: "ward",
+    clinical_problem_categories: ["breathin", "circulation"],
+    focus_of_encounter: "discharge",
+    case_summary: "lorem ipsum",
+    positive_areas: "lorem ipsum",
+    development_areas: "lorem ipsum",
+    comments: "lorem ipsum"
+  }
+]
+
+Trainee name (autopopulated)
+Date (autopopulated)
+Assessor's name
+Assessor's position (radio buttons: Consultant / GP / ST3+ or SpR /Speciality doctor SASG / ST or CT1-2 / FY2 / Other 
+Assessor's email [free text box --> needs to auto-generate email to this address once submitted]
+Clinical setting (radio buttons: ED / OPD / Ward / Admissions / GP surgery / Home visit / other)
+Clinical problem category (tick boxes: new patient / follow-up / airway / breathing / circulation / neuro and visual / psych / pain / longterm illness / communication / other)
+Focus of encounter (history / diagnosis / examination / management plan / communication / discharge / other)
+Brief summary of case [free text box] 
+Areas performed well in this encounter [free text box]
+Areas for development, identified by this encounter [free text box]
+Any other comments action [free text box
+

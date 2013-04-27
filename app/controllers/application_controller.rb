@@ -1,4 +1,8 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
+
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  #include ActionController::HttpAuthentication::Basic
+
   before_filter :check_authentication
   
   protected
