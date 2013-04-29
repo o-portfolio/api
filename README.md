@@ -1,4 +1,5 @@
 ## API for O Portfolio.
+[![Build Status](https://travis-ci.org/doctorsonrails/o_portfolio_api.png)](https://travis-ci.org/doctorsonrails/o_portfolio_api)
 
 ### Users
 
