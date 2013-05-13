@@ -1,5 +1,6 @@
 ## API for O Portfolio.
 [![Build Status](https://travis-ci.org/o-portfolio/api.png)](https://travis-ci.org/o-portfolio/api)
+[![Dependencies](https://gemnasium.com/o-portfolio/api.png?travis)](https://gemnasium.com/o-portfolio/api)
 
 ### Users
 ```
