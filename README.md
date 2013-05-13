@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/o-portfolio/api.png)](https://travis-ci.org/o-portfolio/api)
 
 ### Users
-
+```
 GET http://o-portfolio-api-2.herokuapp.com/authenticate
 Returns 200: user_hash or 401
 
@@ -10,7 +10,7 @@ POST http://o-portfolio-api-2.herokuapp.com/users
 Expects {first_name: "Foobar", last_name: "Foobar", email: "Foobar@foobar.com", password: "Foobar"}
 GET http://o-portfolio-api-2.herokuapp.com/users/1
 PUT http://o-portfolio-api-2.herokuapp.com/users/1
-
+```
 
 ### Entries
 ```
